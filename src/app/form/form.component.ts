@@ -22,13 +22,20 @@ export class FormComponent implements OnInit {
 cars = ["volvo","saab","mercedes","audi"];
 genre = ["male","female"];
 
- /*formsField = new FormsFields('Name','Lname','13-02-1986','str1','str2',123123,'asdasd');*/
+//formsField = new  FormsFields()
+ formsField = new FormsFields('vita','Lname',new Date(),'saab','str2',123123,'asdasd');
 
    submitted = false;
 
    onSubmit() { this.submitted = true; }
 
+   newForm() {
+     //console.log ('A')
+      //this.formsField = new FormsFields('Vitali','','','','',,'');
+
+   }
+
    // Remove this when we're done
-   get diagnostic() { return JSON.stringify(this.formsField); }
+   //get diagnostic() { return JSON.stringify(this.formsField); }
 
 }
