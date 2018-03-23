@@ -1,0 +1,153 @@
+<div class="container">
+  {{diagnostic}}
+    <div class="row">
+        <div class="col-md-12">
+             <div class="well well-sm">
+                <form
+                #heroForm="ngForm"
+                class="form-horizontal"
+                method="post">
+                    <fieldset>
+                        <legend class="text-center header">FORM PARTS</legend>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center">
+                            <i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="fname"
+                                [(ngModel)]="formsField.name"
+                              
+                                name="name"
+                                type="text"
+                                placeholder="First Name"
+                                class="form-control">
+                                TODO: remove this: {{formsField.name}}
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center">
+                              <i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="lname"
+                                [(ngModel)]="formsField.lname"
+                                name="lname"
+                                type="text"
+                                placeholder="Last Name"
+                                class="form-control">
+                                TODO: remove this: {{formsField.lname}}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center">
+                            <i class="fa fa-calendar-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="birth"
+                             [(ngModel)]="formsField.birth"
+                                name="birth"
+                                type="date"
+                                placeholder="Date of birth"
+                                class="form-control">
+                              TODO: remove this: {{formsField.birth}}
+                            </div>
+                        </div>
+
+
+                      <div class="form-group">
+                      <span class="col-md-1 col-md-offset-2 text-center">
+                      <i class="fa fa-check  bigicon"></i></span>
+                      <div class="col-md-8" >
+
+
+                              <input
+                              type="radio"
+                              name="male"
+
+                              >male
+
+                              <input
+                              type="radio"
+                              name="male"
+
+                              > female
+
+
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                    <span class="col-md-1 col-md-offset-2 text-center">
+                    <i class="fa fa-upload   bigicon"></i></span>
+                    <div class="col-md-8">
+
+                   <input type="file" name="img">
+
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                    <span class="col-md-1 col-md-offset-2 text-center">
+                    <i class="fa fa fa-automobile   bigicon"></i></span>
+                    <div class="col-md-8">
+
+                                <select
+                                      name='selectCar'
+                                      [(ngModel)]="formsField.birth"
+                                      >
+                       <option *ngFor='let car of cars' [value]="car">{{car}}</option>
+
+                     </select>
+TODO: remove this: {{formsField.birth}}
+                    </div>
+                    </div>
+
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center">
+                              <i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="email"
+                                [(ngModel)]="formsField.email"
+                                name="email" type="text"
+                                placeholder="Email Address" class="form-control">
+                            </div>
+                            TODO: remove this: {{formsField.email}}
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="phone"
+                                [(ngModel)]="formsField.phone"
+                                name="phone"
+                                type="text"
+                                placeholder="Phone" class="form-control">
+                                TODO: remove this: {{formsField.phone}}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea class="form-control"
+                                id="message"
+                                [(ngModel)]="formsField.phone"
+                                name="message"
+                                placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                                  TODO: remove this: {{formsField.message}}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
